@@ -1,64 +1,72 @@
 import React from "react"
+import './mainpage.css'
+
 
 export default function Mainpage() {
   return (
-    <section class='text-gray-600 body-font bg-green-100'>
-      <div class='container px-5 py-24 mx-auto flex flex-col'>
-        <div class='text-left text-3xl'>
+    <section className='mainpage'>
+      <div className='container px-5 pt-12 pb-4 mx-auto flex flex-col'>
+        <div className='title'>
           <h2>익명 질문 공간</h2>
         </div>
-        <div class='lg:w-4/6 mx-auto'>
-          <div class='flex flex-col sm:flex-row mt-10'>
-            <div class='sm:w-1/3 text-center sm:pr-8 sm:py-8'>
-              <h3 class='font-medium title-font mt-4 text-gray-900 text-lg px-2 '>
+        <div className='lg:w-4/6 mx-auto'>
+          <div className='flex flex-col sm:flex-row mt-10'>
+            <div className='sm:w-1/3 text-center sm:pr-8'>
+              <div className='semi-title'>
                 익명으로 질문해보세요
-              </h3>
-              <section class='text-gray-600 body-font'>
-                <div class='container px-5 py-24 mx-auto flex flex-wrap'>
-                  <div class='flex flex-wrap w-full'>
-                    <div class='lg:w-2/5 md:w-1/2 md:pr-10 md:py-6'>
-                      <div class='flex relative pb-12'>
-                        <div class='h-full w-10 absolute inset-0 flex items-center justify-center'>
-                          <div class='h-full w-1 bg-gray-200 pointer-events-none'></div>
-                        </div>
-                        <div class='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10'></div>
-                        <div class='flex-grow pl-4'>
-                          <h2 class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
-                            Guest
-                          </h2>
-                          <p class='leading-relaxed'>질문</p>
-                        </div>
-                      </div>
-                      <div class='flex relative pb-12'>
-                        <div class='h-full w-10 absolute inset-0 flex items-center justify-center'></div>
-                        <div class='flex-shrink-0 w-10 h-10 rounded-full bg-red-500 inline-flex items-center justify-center text-white relative z-10'></div>
-                        <div class='flex-grow pl-4'>
-                          <h2 class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
-                            Host
-                          </h2>
-                          <p class='leading-relaxed'>답변</p>
-                        </div>
-                      </div>
+              </div>
+                <br></br>
+                <div className="sm:rounded-b-lg border-slate-500 w-full text-brown-900 dark:tet-slate-400 dark:border-slate-700">
+                  <div class="flex">
+                    <div class="flex flex-col mr-2 shrink-0 divide-brown-900 dark:divide-slate-400 items-center">
+                      <img src="guest.png"></img>
+                    <div class="grow"></div>
                     </div>
+                    <div class='flex flex-col space-y-12 w-full'>
+                    <div class="flex flex-col w-full">
+                      <div class="flex justify-between mb-1">
+                        <div class='flex items-center space-x-1 w-full mr-2'> 
+                          <span class="text-lg font-bold dark:text-slate-300 text-brown-900">Guest</span>
+                          <span class="shrink-0 text-xs">3일 전</span>
+                        </div>
+                      </div>   
+                    <p>질문</p>
+                    <div class="pb-10 flex flex-row pt-3 justify-between items-start"></div>
                   </div>
                 </div>
-              </section>
+              </div>
+            </div>    
+            <div>
+              <div class='flex'>
+                <div class='flex flex-col divide-x-2 items-center divide-brown-900 dark:divide-slate-400 shrink-0 mr-2'>
+                  <div class='rounded-full'>
+                    <img src="host.png"></img>
+                  </div>
+                </div>
+                <div class='flex flex-col w-full'>
+                  <div class='flex justify-between'>
+                    <div class='flex items-center space-x-1'>
+                      <span class='block text-lg font-bold text-brown-900 dark:text-slate-200'>Host</span>
+                      <span class='shrink-0 text-xs'>2일 전</span>
+                    </div>
+                  </div>
+                <p>답변</p>
+                </div>
+              </div>
             </div>
-            <div class='sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left text-sm'>
+            </div>
+            <div class='explain'>
               <p className='mb-4'>
-                익명 질문과 답변 서비스에 오신 것을 환영합니다.
-              </p>
-              <p className='mb-4'>
-                ama는 사용자가 익명으로 질문하고 답변을 받을 수 있는
+                <span id="bold-text">익</span>
+                명 질문과 답변 서비스에 오신 것을 환영합니다.
+                A.M.A는 사용자가 익명으로 질문하고 답변을 받을 수 있는
                 플랫폼입니다.
-              </p>
-              <p className='mb-4'>
-                ama의 목표는 다른 사람에 대한 두려움 없이 자신의 생각과 감정을
+                A.M.A의 목표는 다른 사람에 대한 두려움 없이 자신의 생각과 감정을
                 공유할 수 있는 개방적이고 솔직한 소통을 위한 안전한 공간을
                 만드는 것입니다.
               </p>
               <p className='mb-4'>
-                ama의 익명성을 중요하게 생각합니다. 우리는 사용자가 두려움 없이
+                A.M.A의 익명성을 중요하게 생각합니다. 우리는 사용자가 두려움 없이
                 자유롭게 자신을 표현할 수 있는 환경을 조성하기 위해 노력합니다.
               </p>
               <p className='mb-4'>
