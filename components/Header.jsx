@@ -1,11 +1,12 @@
 import Link from "next/link"
 import React from "react"
+import './header.css'
 
 export default function Header() {
   return (
-    <header>
+    <header class='header'>
       <nav className=' flex flex-row justify-between items-center px-8 py-4'>
-        <Link href='/' className=' text-lg font-bold'>
+        <Link href='/' className=' text-3xl font-bold'>
           A.M.A
         </Link>
 
