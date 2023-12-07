@@ -9,7 +9,8 @@ const questionSchema = new Schema(
          * likeCount: 좋아요 갯수
          */
         author: { type: String, required: true },
-        ownerId: { type: mongoose.Types.ObjectId, required: true },
+        // ownerId: { type: mongoose.Types.ObjectId, required: true },
+        ownerId: { type: String, required: true }, // 임시 사용
         content: { type: String, required: true },
         likeCount: { type: Number, required: true, default: 0 },
         createdAt: { type: Date, default: Date.now, required: true },
@@ -29,4 +30,6 @@ const questionSchema = new Schema(
     },
 )
 
-module.exports = mongoose.model("Question", questionSchema)
+const Question = mongoose.models.Question || mongoose.model("Question", questionSchema)
+
+export default Question
