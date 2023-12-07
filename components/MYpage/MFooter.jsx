@@ -1,4 +1,5 @@
 import Link from "next/link"
+import '../Mainpage/footer.css'
 
 export default function MFooter() {
   return (

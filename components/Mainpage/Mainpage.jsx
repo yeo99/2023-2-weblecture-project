@@ -5,12 +5,12 @@ import './mainpage.css'
 export default function Mainpage() {
   return (
     <section className='mainpage'>
-      <div className='container px-5 pt-12 pb-4 mx-auto flex flex-col'>
+      <div className='container px-5 pt-7 pb-20 mx-auto flex flex-col'>
         <div className='title'>
           <h2>익명 질문 공간</h2>
         </div>
         <div className='lg:w-4/6 mx-auto'>
-          <div className='flex flex-col sm:flex-row mt-10'>
+          <div className='flex flex-row sm:flex-row'>
             <div className='sm:w-1/3 text-center sm:pr-8'>
               <div className='semi-title'>
                 익명으로 질문해보세요
