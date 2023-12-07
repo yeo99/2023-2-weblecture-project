@@ -1,0 +1,26 @@
+
+.mypage{
+  font-family: 'GmarketSansMedium';
+  background: linear-gradient(rgba(215,230,199,100),rgba(236,255,217,0));
+  display: grid;
+  place-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.mypage2{
+  font-family: 'GmarketSansMedium';
+  background: linear-gradient(rgba(215,230,199,100),rgba(236,255,217,0));
+  display: grid;
+  place-items: center;
+
+}
+
+#like{
+    width: 50px;
+    fill: #ddd;
+}
+
+#like.active{
+    fill: red;
+}

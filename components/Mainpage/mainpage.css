@@ -1,24 +1,26 @@
 .mainpage{
   font-family: GmarketSansMedium;
-  font-weight: bold;
   background: linear-gradient(rgba(215,230,199,100),rgba(236,255,217,0));
 }
 
 .title{
   font-size: 45px;
   padding-left: 15rem;
-  font-family: GmarketSansMedium;
+  font-family: GmarketSansBold;
   font-weight: bold;
 }
 
 .semi-title{
+  padding-top: 40px;
   font-family: GmarketSansMedium;
   font-weight: 300;
   font-size: 18px;
+  box-sizing: border-box;
+  width: 200px;
 }
 
 .explain{
-  padding-left: 20rem;
+  padding-left: 200px;
   font-family: GmarketSansMedium;
   font-weight: 300;
   line-height: 1.8;

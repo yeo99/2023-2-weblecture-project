@@ -1,6 +1,6 @@
-import Header from "@/components/Header"
-import Mainpage from "@/components/Mainpage"
-import Footer from "@/components/Footer"
+import Header from "@/components/Mainpage/Header"
+import Mainpage from "@/components/Mainpage/Mainpage"
+import Footer from "@/components/Mainpage/Footer"
 // import Image from "next/image"
 
 export default function Home() {
