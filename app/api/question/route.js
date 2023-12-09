@@ -54,6 +54,8 @@ export async function DELETE(request) {
 export async function PUT(request, {params}) {
     try {
         const id = params;
+        console.log(params)
+        console.log(id)
         const {content} = await request.json();
 
         await connectMongoDB();
