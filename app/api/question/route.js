@@ -49,3 +49,23 @@ export async function DELETE(request) {
         return NextResponse.json({ message: '서버 오류가 발생하였습니다.'}, {status: 500})
     }
 }
+
+// 댓글 수정
+export async function PUT(request, {params}) {
+    try {
+        const id = params;
+        console.log(params)
+        console.log(id)
+        const {content} = await request.json();
+
+        await connectMongoDB();
+        await Question.findByIdAndUpdate(id, {content})
+
+        return NextResponse.json({ message: "댓글이 수정되었습니다."})
+    } catch(error) {
+        console.log(error)
+
+        return NextResponse.json({ message: '서버 오류가 발생하였습니다.' }, {status: 500})
+    }
+
+}
