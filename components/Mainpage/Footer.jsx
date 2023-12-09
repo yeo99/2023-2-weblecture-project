@@ -16,10 +16,10 @@ export default function Footer() {
               서비스 이용약관
             </button>
             <button className='text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 hover:underline text-center '>
-            개인정보 처리방침
+              개인정보 처리방침
             </button>
             <button className='text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4 hover:underline text-center '>
-            청소년 보호정책
+              청소년 보호정책
             </button>
           </div>
         </div>
