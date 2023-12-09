@@ -1,28 +1,31 @@
-import MMain from "@/components/MYpage/MMain"
-import MHeader from "@/components/MYpage/MHeader"
-import MFooter from "@/components/MYpage/MFooter"
-import '@/components/MYpage/MMain.css'
+
+import MHeader from "@/components/mypage/MHeader"
+import MFooter from "@/components/mypage/MFooter"
+import '@/components/mypage/MMain.css'
 import React from "react"
-import LikeButton from "@/components/MYpage/Likebutton"
+import LikeButton from "@/components/mypage/Likebutton"
+import { NextAuthProvider } from "@/components/Providers"
 
 export default function page() {
   return (
     <main>
+      <NextAuthProvider>
       <MHeader />
-      <article class='mypage2'>
+      </NextAuthProvider>
+      <article className='mypage2'>
         <section>
-          <div class='container px-5 py-10 mx-auto flex flex-wrap'>
-            <div class='flex flex-wrap w-full border-b-2 border-black'>
-              <div class='lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 '>
-                <div class='flex relative pb-12 '>
-                  <div class='h-full w-10 absolute inset-0 flex items-center justify-center '></div>
-                  <div class='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 '></div>
-                  <div class='flex-grow pl-4'>
-                    <h2 class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
+          <div className='container px-5 py-10 mx-auto flex flex-wrap'>
+            <div className='flex flex-wrap w-full border-b-2 border-black'>
+              <div className='lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 '>
+                <div className='flex relative pb-12 '>
+                  <div className='h-full w-10 absolute inset-0 flex items-center justify-center '></div>
+                  <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 '></div>
+                  <div className='flex-grow pl-4'>
+                    <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
                       To.받은 사람
                     </h2>
-                    <p class='leading-relaxed'> 질문 1</p>
-                    <div className='flex place-items-center '>
+                    <p className='leading-relaxed'> 질문 1</p>
+                    <div classNameName='flex place-items-center '>
                     <LikeButton/>
                         <path
                           stroke-linecap='round'
@@ -35,7 +38,7 @@ export default function page() {
                         viewBox='0 0 24 24'
                         stroke-width='1.5'
                         stroke='currentColor'
-                        class='w-6 h-6 mx-10'
+                        className='w-6 h-6 mx-10'
                       >
                         <path
                           stroke-linecap='round'
@@ -49,7 +52,7 @@ export default function page() {
                         viewBox='0 0 24 24'
                         stroke-width='1.5'
                         stroke='currentColor'
-                        class='w-6 h-6 mx-10'
+                        className='w-6 h-6 mx-10'
                       >
                         <path
                           stroke-linecap='round'
@@ -65,18 +68,18 @@ export default function page() {
           </div>
         </section>
         <section>
-          <div class='container px-5 py-10 mx-auto flex flex-wrap'>
-            <div class='flex flex-wrap w-full border-b-2 border-black'>
-              <div class='lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 '>
-                <div class='flex relative pb-12 '>
-                  <div class='h-full w-10 absolute inset-0 flex items-center justify-center '></div>
-                  <div class='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 '></div>
-                  <div class='flex-grow pl-4'>
-                    <h2 class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
+          <div className='container px-5 py-10 mx-auto flex flex-wrap'>
+            <div className='flex flex-wrap w-full border-b-2 border-black'>
+              <div className='lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 '>
+                <div className='flex relative pb-12 '>
+                  <div className='h-full w-10 absolute inset-0 flex items-center justify-center '></div>
+                  <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 '></div>
+                  <div className='flex-grow pl-4'>
+                    <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
                       To.받은 사람
                     </h2>
-                    <p class='leading-relaxed'> 질문 2</p>
-                    <div className='flex place-items-center '>
+                    <p className='leading-relaxed'> 질문 2</p>
+                    <div classNameName='flex place-items-center '>
                     <LikeButton/>
                         <path
                           stroke-linecap='round'
@@ -89,7 +92,7 @@ export default function page() {
                         viewBox='0 0 24 24'
                         stroke-width='1.5'
                         stroke='currentColor'
-                        class='w-6 h-6 mx-10'
+                        className='w-6 h-6 mx-10'
                       >
                         <path
                           stroke-linecap='round'
@@ -103,7 +106,7 @@ export default function page() {
                         viewBox='0 0 24 24'
                         stroke-width='1.5'
                         stroke='currentColor'
-                        class='w-6 h-6 mx-10'
+                        className='w-6 h-6 mx-10'
                       >
                         <path
                           stroke-linecap='round'
@@ -119,18 +122,18 @@ export default function page() {
           </div>
         </section>
         <section>
-          <div class='container px-5 py-10 mx-auto flex flex-wrap'>
-            <div class='flex flex-wrap w-full border-b-2 border-black'>
-              <div class='lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 '>
-                <div class='flex relative pb-12 '>
-                  <div class='h-full w-10 absolute inset-0 flex items-center justify-center '></div>
-                  <div class='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 '></div>
-                  <div class='flex-grow pl-4'>
-                    <h2 class='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
+          <div className='container px-5 py-10 mx-auto flex flex-wrap'>
+            <div className='flex flex-wrap w-full border-b-2 border-black'>
+              <div className='lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 '>
+                <div className='flex relative pb-12 '>
+                  <div className='h-full w-10 absolute inset-0 flex items-center justify-center '></div>
+                  <div className='flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10 '></div>
+                  <div className='flex-grow pl-4'>
+                    <h2 className='font-medium title-font text-sm text-gray-900 mb-1 tracking-wider'>
                       To.받은 사람
                     </h2>
-                    <p class='leading-relaxed'> 질문 3</p>
-                    <div className='flex place-items-center '>
+                    <p className='leading-relaxed'> 질문 3</p>
+                    <div classNameName='flex place-items-center '>
                     <LikeButton/>
                         <path
                           stroke-linecap='round'
@@ -144,7 +147,7 @@ export default function page() {
                         viewBox='0 0 24 24'
                         stroke-width='1.5'
                         stroke='currentColor'
-                        class='w-6 h-6 mx-10'
+                        className='w-6 h-6 mx-10'
                       >
                         <path
                           stroke-linecap='round'
@@ -158,7 +161,7 @@ export default function page() {
                         viewBox='0 0 24 24'
                         stroke-width='1.5'
                         stroke='currentColor'
-                        class='w-6 h-6 mx-10'
+                        className='w-6 h-6 mx-10'
                       >
                         <path
                           stroke-linecap='round'
