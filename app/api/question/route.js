@@ -51,11 +51,9 @@ export async function DELETE(request) {
 }
 
 // 댓글 수정
-export async function PUT(request, {params}) {
+export async function PUT(request) {
     try {
-        const id = params;
-        console.log(params)
-        console.log(id)
+        const id = request.nextUrl.searchParams.get("id")
         const {content} = await request.json();
 
         await connectMongoDB();
@@ -67,5 +65,4 @@ export async function PUT(request, {params}) {
 
         return NextResponse.json({ message: '서버 오류가 발생하였습니다.' }, {status: 500})
     }
-
 }
