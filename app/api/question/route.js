@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 export async function GET(request) {
     try {
         const userId = request.nextUrl.searchParams.get("userId")
-
+        
         await connectMongoDB()
         const questions = await Question.find({"ownerId":userId})
 
@@ -37,7 +37,7 @@ export async function POST(request) {
 // 댓글 삭제
 export async function DELETE(request) {
     try {
-        const id = request.nextUrl.searchParams.get("id")
+        const id = request.nextUrl.searchParams.get("questionId")
 
         await connectMongoDB()
         await Question.findByIdAndDelete(id)
@@ -53,7 +53,7 @@ export async function DELETE(request) {
 // 댓글 수정
 export async function PUT(request) {
     try {
-        const id = request.nextUrl.searchParams.get("id")
+        const id = request.nextUrl.searchParams.get("questionId")
         const {content} = await request.json();
 
         await connectMongoDB();
