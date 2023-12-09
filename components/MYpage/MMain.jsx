@@ -1,11 +1,12 @@
 "use client";
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
-import AddQuestion from "@/components/MYpage/AddQuestion"
+import AddQuestion from "@/components/mypage/AddQuestion"
 import Link from "next/link";
 import LikeButton from "./Likebutton"
 import YourComponent from "./AddQuestion"
 import CommentSection from "./Comment"
+import './MMain.css'
 
 export default function MMain() {
   // useSession 훅을 사용하여 사용자 세션 가져오기
@@ -31,7 +32,7 @@ export default function MMain() {
               {session?.user?.name}
             </span>
             {/* 여기에 유저의 소개글 추가 */}
-            <p className="mt-2 text-center text-sm text-gray-600">
+            <p className="mt-2 text-center text-sm">
               여기에 유저의 소개글을 작성하세요.
             </p>
             <AddQuestion>
