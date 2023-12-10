@@ -6,7 +6,7 @@ import './mainpage/mainpage.css'
 export default function SignInBtn() {
   return (
     <div className="signinpage mt-0">
-      <div className='border-solid border-1 border-green-800 px-5 pt-40 pb-20 mx-auto flex flex-col'>
+      <div className=' px-5 pt-40 pb-20 mx-auto flex flex-col'>
         <div className='grid place-items-center text-3xl font-bold '>
           A.M.A 서비스
         </div>
