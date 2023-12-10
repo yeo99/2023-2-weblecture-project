@@ -8,11 +8,21 @@ export default function page() {
   return (
     <div>
       <NextAuthProvider>
-      <MHeader />
+        <MHeader />
       </NextAuthProvider>
       <NextAuthProvider>
-      <MMain />
+        <MMain />
       </NextAuthProvider>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <MFooter />
     </div>
   )
