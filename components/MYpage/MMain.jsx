@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 "use client"
 import { useSession, signOut } from "next-auth/react"
 import Image from "next/image"
 import AddQuestion from "@/components/MYpage/AddQuestion"
+=======
+// /components/MYpage/MMain.jsx
+"use client";
+import { useSession, signOut } from "next-auth/react";
+import Image from "next/image";
+import AddQuestion from "@/components/mypage/AddQuestion"
+import Link from "next/link";
+>>>>>>> 875c0b476df235c6f6741e51990169a18ddcc369
 import LikeButton from "./Likebutton"
 import YourComponent from "./AddQuestion"
 import CommentSection from "./Comment"

@@ -9,7 +9,7 @@ export default async function SignIn() {
     redirect("/");
   }
   return (
-    <div className="mt-16">
+    <div>
       <SignInBtn />
     </div>
   );

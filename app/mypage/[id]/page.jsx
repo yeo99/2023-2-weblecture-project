@@ -1,16 +1,18 @@
+import MMain from "@/components/mypage/MMain"
 import Header from "@/components/header/Header"
-import Mainpage from "@/components/Mainpage/Mainpage"
 import Footer from "@/components/footer/Footer"
+import React from "react"
 import { NextAuthProvider } from "@/components/Providers"
-// import Image from "next/image"
 
-export default function Home() {
+export default function page() {
   return (
     <div>
       <NextAuthProvider>
       <Header />
       </NextAuthProvider>
-      <Mainpage />
+      <NextAuthProvider>
+      <MMain />
+      </NextAuthProvider>
       <Footer />
     </div>
   )
