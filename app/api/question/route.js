@@ -1,3 +1,4 @@
+// /app/api/question/route.js
 import connectMongoDB from "@/libs/mongodb";
 import Question from "@/models/question";
 import { NextResponse } from "next/server";
