@@ -6,11 +6,12 @@ import { NextResponse } from "next/server";
 // userId로 댓글 불러오기(각 유저의 _id)
 export async function GET(request) {
     try {
-        const userId = request.nextUrl.searchParams.get("userId")
+        // const userId = request.nextUrl.searchParams.get("userId")
+        const userId = params
         
         await connectMongoDB()
         const questions = await Question.find({"ownerId":userId})
-
+        console.log(questions)
         return NextResponse.json({questions})
     } catch(error) {
         console.log(error)
