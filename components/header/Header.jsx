@@ -34,7 +34,7 @@ export default function MHeader() {
               <Link href='/mypage/question' className='text-base font-bold px-4 py-2'>
                 받은 질문
               </Link>
-              <Link href='/mypage/answer' className='text-base font-bold px-4 py-2'>
+              <Link href='/mypage/answer' className='text-base font-bold pr-3 py-2'>
                 내가 한 질문
               </Link>
               <button
