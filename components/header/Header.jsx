@@ -49,7 +49,7 @@ export default function MHeader() {
               <Link href={`/mypage/${userObjectId}`}>
                 <p className="text-base font-bold px-4 py-2">받은 질문</p>
               </Link>
-              <Link href="/mypage/answer">
+              <Link href="/mypage/question">
                 <p className="text-base font-bold px-4 py-2">내가 한 질문</p>
               </Link>
               <button
