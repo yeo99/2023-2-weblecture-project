@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import "../header/header.css";
-import ShareButton from "../mypage/Linkshare";
+// import ShareButton from "../mypage/Linkshare";
+import ShareButton from "@/components/MYpage/Linkshare"
 import { useSession, signOut } from "next-auth/react";
 import React, { useState, useEffect } from "react";
 
