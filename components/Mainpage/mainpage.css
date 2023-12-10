@@ -53,3 +53,9 @@ img{
   box-sizing: border-box;
   height: 800px;
 }
+
+.borde{
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: rgb(22 163 74);
+}
