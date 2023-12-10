@@ -1,41 +1,56 @@
 "use client";
-import Link from "next/link"
-import React from "react"
-import '../header/header.css'
-import ShareButton from "../mypage/Linkshare"
+import Link from "next/link";
+import "../header/header.css";
+import ShareButton from "../mypage/Linkshare";
 import { useSession, signOut } from "next-auth/react";
-import Image from "next/image";
-import Header from "@/components/header/Header"
-import Mainpage from "@/components/Mainpage/Mainpage"
-import Footer from "@/components/footer/Footer"
-import { NextAuthProvider } from "@/components/Providers"
-
+import React, { useState, useEffect } from "react";
 
 export default function MHeader() {
   const { status, data: session } = useSession();
+  const [userObjectId, setUserObjectId] = useState(null);
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      const fetchUserObjectId = async () => {
+        try {
+          const response = await fetch(
+            `/api/user/?userEmail=${encodeURIComponent(
+              session.user.email
+            )}`
+          );
+          const data = await response.json();
+          if (data.userObjectId) {
+            setUserObjectId(data.userObjectId);
+          }
+        } catch (error) {
+          console.error("Error fetching user object ID:", error);
+        }
+      };
+      fetchUserObjectId();
+    }
+  }, [status, session]);
+
   const handleLogout = () => {
-    // 로그아웃 전에 확인 메시지를 띄우고 로그아웃 처리
     if (window.confirm("로그아웃 하시겠습니까?")) {
       signOut();
     }
   };
 
   return (
-    <header className='MHeader'>
+    <header className="MHeader">
       <div className="flex flex-row justify-between items-center px-8 py-4">
-        <Link href='/' className='text-3xl font-bold'>
-          A.M.A
+        <Link href="/">
+          <p className="text-3xl font-bold">A.M.A</p>
         </Link>
         <div className="flex items-center">
           {status === "authenticated" ? (
-            // 인증된 경우 사용자 프로필 정보 표시
             <>
-              <ShareButton/>
-              <Link href='/mypage/question' className='text-base font-bold px-4 py-2'>
-                받은 질문
+              <ShareButton />
+              <Link href={`/mypage/${userObjectId}`}>
+                <p className="text-base font-bold px-4 py-2">받은 질문</p>
               </Link>
-              <Link href='/mypage/answer' className='text-base font-bold px-4 py-2'>
-                내가 한 질문
+              <Link href="/mypage/answer">
+                <p className="text-base font-bold px-4 py-2">내가 한 질문</p>
               </Link>
               <button
                 onClick={handleLogout}
@@ -45,12 +60,9 @@ export default function MHeader() {
               </button>
             </>
           ) : (
-            // 로그인하지 않은 경우에는 alert로 접근 거부
-            <div onClick={() => alert("로그인이 필요합니다.")}>
-              <Link href='/signin' className='text-base font-bold px-4 py-2'>
-                로그인
-              </Link>
-            </div>
+            <Link href="/signin">
+              <p className="text-base font-bold px-4 py-2">로그인</p>
+            </Link>
           )}
         </div>
       </div>
