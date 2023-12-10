@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link"
 import React from "react"
-import '../mainpage/header.css'
-import ShareButton from "./Linkshare"
+import '../header/header.css'
+import ShareButton from "../mypage/Linkshare"
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
-import Header from "@/components/Mainpage/Header"
+import Header from "@/components/header/Header"
 import Mainpage from "@/components/Mainpage/Mainpage"
-import Footer from "@/components/Mainpage/Footer"
+import Footer from "@/components/footer/Footer"
 import { NextAuthProvider } from "@/components/Providers"
 
 
