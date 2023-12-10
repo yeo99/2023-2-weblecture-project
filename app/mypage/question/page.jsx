@@ -1,6 +1,6 @@
 import MMain from "@/components/mypage/MMain"
-import MHeader from "@/components/mypage/MHeader"
-import MFooter from "@/components/mypage/MFooter"
+import Header from "@/components/header/Header"
+import Footer from "@/components/footer/Footer"
 import React from "react"
 import { NextAuthProvider } from "@/components/Providers"
 
@@ -8,12 +8,12 @@ export default function page() {
   return (
     <div>
       <NextAuthProvider>
-      <MHeader />
+      <Header />
       </NextAuthProvider>
       <NextAuthProvider>
       <MMain />
       </NextAuthProvider>
-      <MFooter />
+      <Footer />
     </div>
   )
 }

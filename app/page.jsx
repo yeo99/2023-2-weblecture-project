@@ -1,6 +1,6 @@
-import Header from "@/components/Mainpage/Header"
+import Header from "@/components/header/Header"
 import Mainpage from "@/components/Mainpage/Mainpage"
-import Footer from "@/components/Mainpage/Footer"
+import Footer from "@/components/footer/Footer"
 import { NextAuthProvider } from "@/components/Providers"
 // import Image from "next/image"
 
