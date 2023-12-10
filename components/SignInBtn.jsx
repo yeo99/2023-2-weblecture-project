@@ -1,7 +1,8 @@
 "use client"
 import { signIn } from "next-auth/react"
 import Image from "next/image"
-import './mainpage/mainpage.css'
+// import './mainpage/mainpage.css'
+import '@/components/Mainpage/mainpage.css'
 
 export default function SignInBtn() {
   return (
