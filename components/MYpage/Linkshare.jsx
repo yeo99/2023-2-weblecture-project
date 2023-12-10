@@ -25,7 +25,7 @@ const ShareButton = () => {
 
   return (
     <button onClick={handleShareClick}>
-      <FontAwesomeIcon icon={faShareAlt} />
+      <FontAwesomeIcon className='pr-2' icon={faShareAlt} />
       <span>링크 공유</span>
     </button>
   );

@@ -9,8 +9,8 @@ export default async function SignIn() {
     redirect("/");
   }
   return (
-    <div className="mt-16">
-      <SignInBtn/>
+    <div>
+      <SignInBtn />
     </div>
   );
 }
