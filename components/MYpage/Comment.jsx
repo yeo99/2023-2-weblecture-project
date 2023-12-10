@@ -61,6 +61,7 @@ const CommentSection = ({ onCommentSubmit }) => {
       )}
 
       {/* 댓글 목록 표시 */}
+      
       {comments.map((comment, index) => (
         <div key={index} className='flex relative pb-12'>
           <div className='flex-grow pl-4'>

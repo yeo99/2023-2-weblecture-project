@@ -4,7 +4,14 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons"
 
-const ShareButton = ({ link }) => {
+const ShareButton = () => {
+  const [currentURL, setCurrentURL] = useState("")
+
+  useEffect(() => {
+    // 컴포넌트가 마운트될 때 한 번만 실행되는 코드
+    setCurrentURL(window.location.href)
+  }, [])
+
   const handleShareClick = async () => {
     try {
       await navigator.clipboard.writeText(link)

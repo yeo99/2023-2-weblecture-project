@@ -1,6 +1,6 @@
-import MMain from "@/components/MYpage/MMain"
-import MHeader from "@/components/MYpage/MHeader"
-import MFooter from "@/components/MYpage/MFooter"
+import MMain from "@/components/mypage/MMain"
+import MHeader from "@/components/mypage/MHeader"
+import MFooter from "@/components/mypage/MFooter"
 import React from "react"
 import { NextAuthProvider } from "@/components/Providers"
 

@@ -2,7 +2,6 @@
 import { useSession, signOut } from "next-auth/react"
 import Image from "next/image"
 import AddQuestion from "@/components/MYpage/AddQuestion"
-import Link from "next/link"
 import LikeButton from "./Likebutton"
 import YourComponent from "./AddQuestion"
 import CommentSection from "./Comment"
