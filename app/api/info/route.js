@@ -14,7 +14,7 @@ export async function GET(request) {
             NextResponse.json({ message: '유저를 찾을 수 없습니다.' }, {status: 404})
         }
 
-        return NextResponse.json({userObjectId: user._id})
+        return NextResponse.json({userObjectId: user._id}, { headers: {'cache-control':'no-store'}});
     } catch(error) {
         console.log(error)
 
