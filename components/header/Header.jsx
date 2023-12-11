@@ -22,6 +22,7 @@ export default function MHeader() {
           // );
 
           // const data = await response.json();
+          console.log(session)
           const getUserId = async() => {
             const response = await axiosInstance.get(`/api/info?userEmail=${session.user.email}`);
 
