@@ -55,7 +55,7 @@ export default function Footer() {
                 <span><b>Kim Myeong Gyu</b></span>
               </div>
               <div>
-                92015415
+                92014980
               </div>
               <div>
                 <Link className="underline underline-offset-4" href='https://portfolio-bice-omega-36.vercel.app/'>포트폴리오</Link>
