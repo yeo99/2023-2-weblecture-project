@@ -15,11 +15,13 @@ export default function MHeader() {
       const fetchUserObjectId = async () => {
         try {
           const response = await fetch(
-            `/api/info/?userEmail=${encodeURIComponent(
-              session.user.email
-            )}`
+            // `/api/info?userEmail=${encodeURIComponent(
+            //   session.user.email
+            // )}`
+            `/api/info?userEmail=${session.user.email}`
           );
           const data = await response.json();
+          console.log(data)
           if (data.userObjectId) {
             setUserObjectId(data.userObjectId);
           }

@@ -22,7 +22,7 @@ export default function MMain() {
     const getUser = async(params) => {
       try {
         const request = await axiosInstance.get(`/api/user?objectId=${params}`)
-        console.log(request.data)
+        // console.log(request.data)
         setUserData(request.data)
       } catch (error) {
         alert('유저 데이터를 가져오는 중 에러 발생.')
