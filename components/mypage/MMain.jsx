@@ -9,13 +9,33 @@
   import CommentSection from "./Comment"
   import './MMain.css'
   import axiosInstance from "@/libs/axios";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
   
 export default function MMain() {
   // useSession 훅을 사용하여 사용자 세션 가져오기
   const { status, data: session } = useSession()
+  const params = useParams().id;
+  const [userData, setUserData] = useState(null);
+  // console.log(userData)
+  useEffect(() => {
+    const getUser = async(params) => {
+      try {
+        const request = await axiosInstance.get(`/api/user?objectId=${params}`)
+        console.log(request.data)
+        setUserData(request.data)
+      } catch (error) {
+        alert('유저 데이터를 가져오는 중 에러 발생.')
+      }
+    }
+    if (params) {
+      getUser(params);
+    }
+  }, [params])
 
   return (
     <main className='mypage'>
+      {/* <div>{JSON.stringify(userData)}</div> */}
       <div className='flex flex-col items-center'>
         {status === "authenticated" ? (
           // 인증된 경우 사용자 프로필 정보 표시
@@ -41,7 +61,7 @@ export default function MMain() {
           </>
         ) : (
           <div>
-            <p>로그인 하쇼</p>
+            <p>로그인 후 이용해주세요.</p>
           </div>
         )}
       </div>
