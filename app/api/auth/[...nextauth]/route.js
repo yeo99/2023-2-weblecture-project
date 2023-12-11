@@ -21,7 +21,6 @@ export const authOptions = {
   
   callbacks: {
     async signIn({ user, account }) {
-      console.log(user)
       const apiUrl = process.env.API_URL;
       const { name, email, image } = user;
       if (account.provider === "google" || account.provider === "github") {
