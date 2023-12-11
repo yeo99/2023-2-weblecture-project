@@ -20,6 +20,7 @@ export default function MHeader() {
             )}`
           );
           const data = await response.json();
+          console.log(data)
           if (data.userObjectId) {
             setUserObjectId(data.userObjectId);
           }
