@@ -15,7 +15,7 @@ export default function MHeader() {
       const fetchUserObjectId = async () => {
         try {
           const response = await fetch(
-            `/api/info/?userEmail=${encodeURIComponent(
+            `/api/info?userEmail=${encodeURIComponent(
               session.user.email
             )}`
           );
