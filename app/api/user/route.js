@@ -4,9 +4,9 @@ import { NextResponse } from 'next/server'
 
 // 유저 회원가입
 export async function POST(request) {
-    const { name, email } = await request.json()
+    const { name, email, image } = await request.json()
     await connectMongoDB()
-    await User.create({ name, email })
+    await User.create({ name, email, image })
 
     return NextResponse.json({ message: 'User registered' }, { status: 201 })
 }
