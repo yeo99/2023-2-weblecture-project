@@ -11,19 +11,19 @@ export async function POST(request) {
     return NextResponse.json({ message: 'User registered' }, { status: 201 })
 }
 
-// 유저 _id 반환
+// 유저 _id로 검색 정보 반환
 export async function GET(request) {
     try {
-        const userEmail = request.nextUrl.searchParams.get("userEmail")
+        const objectId = request.nextUrl.searchParams.get("objectId")
 
         await connectMongoDB()
-        const user = await User.findOne({"email":userEmail})
+        const user = await User.findOne({"_id":objectId})
 
         if(!user) {
             NextResponse.json({ message: '유저를 찾을 수 없습니다.'}, {status: 404})
         }
 
-        return NextResponse.json({userObjectId: user._id})
+        return NextResponse.json(user)
     } catch(error) {
         console.log(error)
 
