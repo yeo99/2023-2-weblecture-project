@@ -21,8 +21,9 @@ export const authOptions = {
   
   callbacks: {
     async signIn({ user, account }) {
+      console.log(user)
       const apiUrl = process.env.API_URL;
-      const { name, email } = user;
+      const { name, email, image } = user;
       if (account.provider === "google" || account.provider === "github") {
         try {
           await connectMongoDB();
@@ -33,7 +34,7 @@ export const authOptions = {
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({ name, email }),
+              body: JSON.stringify({ name, email, image }),
             });
             if (res.ok) {
               return user;
