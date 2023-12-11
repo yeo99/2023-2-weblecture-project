@@ -5,6 +5,7 @@ import "../header/header.css";
 import ShareButton from "@/components/mypage/Linkshare"
 import { useSession, signOut } from "next-auth/react";
 import React, { useState, useEffect } from "react";
+import axiosInstance from "@/libs/axios";
 
 export default function MHeader() {
   const { status, data: session } = useSession();
@@ -14,17 +15,28 @@ export default function MHeader() {
     if (status === "authenticated") {
       const fetchUserObjectId = async () => {
         try {
-          const response = await fetch(
-            // `/api/info?userEmail=${encodeURIComponent(
-            //   session.user.email
-            // )}`
-            `/api/info?userEmail=${session.user.email}`
-          );
-          const data = await response.json();
-          console.log(data)
-          if (data.userObjectId) {
-            setUserObjectId(data.userObjectId);
+          // const response = await fetch(
+          //   `/api/info?userEmail=${encodeURIComponent(
+          //     session.user.email
+          //   )}`
+          // );
+
+          // const data = await response.json();
+          const getUserId = async() => {
+            const response = await axiosInstance.get(`/api/info?userEmail=${session.user.email}`);
+
+            if(!response.data.userObjectId) {
+              alert('유저 정보를 가져오던 중 오류가 발생하였습니다.')
+              return false;
+            }
+
+            setUserObjectId(response.data.userObjectId);
           }
+          getUserId()
+          // console.log(data)
+          // if (data.userObjectId) {
+          //   setUserObjectId(data.userObjectId);
+          // }
         } catch (error) {
           console.error("Error fetching user object ID:", error);
         }
